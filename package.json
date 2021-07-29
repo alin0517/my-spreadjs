@@ -1,0 +1,62 @@
+{
+  "name": "my-spreadjs",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@craco/craco": "^6.2.0",
+    "@grapecity/spread-excelio": "^14.1.3",
+    "@grapecity/spread-sheets": "^14.1.3",
+    "@grapecity/spread-sheets-barcode": "^14.1.3",
+    "@grapecity/spread-sheets-charts": "^14.1.3",
+    "@grapecity/spread-sheets-designer": "^14.1.3",
+    "@grapecity/spread-sheets-designer-react": "^14.1.3",
+    "@grapecity/spread-sheets-designer-resources-cn": "^14.1.3",
+    "@grapecity/spread-sheets-languagepackages": "^14.1.3",
+    "@grapecity/spread-sheets-pdf": "^14.1.3",
+    "@grapecity/spread-sheets-pivot-addon": "^14.1.3",
+    "@grapecity/spread-sheets-print": "^14.1.3",
+    "@grapecity/spread-sheets-react": "^14.1.3",
+    "@grapecity/spread-sheets-resources-zh": "^14.1.3",
+    "@grapecity/spread-sheets-shapes": "^14.1.3",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "antd": "^4.16.8",
+    "axios": "^0.21.1",
+    "craco-antd": "^1.19.0",
+    "file-saver": "^2.0.5",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "proxy":"http://127.0.0.1:8088",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
