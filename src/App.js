@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Suspense} from 'react';
+import {Layout} from 'antd'
+import './App.less'
+import IndexFooter from './components/footer'; 
+import IndexSider from './components/sider'; 
+import { Switch,Route,HashRouter, Redirect} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const PureSpread = React.lazy(() => import('./components/pureSpread'))
+const SpreadDesigner = React.lazy(() => import('./components/designer'))
+const {Content,Header} = Layout
+
+
+
+const App = () => (
+  <Layout className="app">
+     <IndexSider/>
+     <Layout>
+        <Content className="index-content">
+          <HashRouter>
+              <Switch>
+                <Suspense fallback={<div>loading...</div>}>
+                  <Route exact path="/" component={PureSpread}/>
+                  <Route exact path="/designer" component={SpreadDesigner}/>    
+                </Suspense>
+              </Switch>
+          </HashRouter>
+        </Content>
+        <IndexFooter/>
+     </Layout>
+  </Layout>
+)
+  
+
 
 export default App;
